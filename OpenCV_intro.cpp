@@ -16,7 +16,7 @@ int main()
     int bluePixels;
     int x;
 
-    Mat frame = imread("BlueCar.bmp"); // Open an image file and store in a new matrix variable
+    Mat frame = imread("Target_Pic.bmp"); // Open an image file and store in a new matrix variable
     Mat frameHSV;
     while(1)    // Main loop to perform image processing
     {
