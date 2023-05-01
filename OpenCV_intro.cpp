@@ -49,24 +49,28 @@ int main()
             x=1;
         else if (bluePixels>redPixels && bluePixels>greenPixels)
             x=2;
+	else 
+		x=3;
+	switch(x)
+	{
+		case 0:
+			printf ("The subject is red");
+			imshow("frame",red);
+		break;
 
-        switch(x)
-        {
-            case 0:
-                printf ("The subject is red");
-                imshow("frame",red);
-            break;
+		case 1:
+			printf("The subject is green");
+			imshow("frame",green);
+		break;
 
-            case 1:
-                printf("The subject is green");
-                imshow("frame",green);
-            break;
-
-            case 2:
-                printf ("The subject is blue");
-                imshow("frame",blue);
-            break;
-        }
+		case 2:
+			printf ("The subject is blue");
+			imshow("frame",blue);
+		break;
+		case 3:
+			printf("No subject detected");
+		break;
+	}
 
 
         int key = cv::waitKey(1);   // Wait 1ms for a keypress (required to update windows
